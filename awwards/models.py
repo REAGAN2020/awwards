@@ -6,3 +6,6 @@ from django.core.validators import MinValueValidator, MaxValueValidator
 class Profile(models.Model):
     Profile_pic = models.ImageField(upload_to='profile_pics/', blank=True)
     prof_user = models.ForeignKey(User, on_delete=models.PROTECT, null=True)
+    bio = models.TextField(default="")
+    contact_info = models.CharField(max_length=200, blank=True)
+    profile_Id = models.IntegerField(default=0)
