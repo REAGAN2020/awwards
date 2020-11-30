@@ -74,6 +74,18 @@ class Comment(models.Model):
     
     def delete_comment(self):
         self.delete()
+    
+     class Meta:
+        db_table = 'comments'
+        ordering = ["-id"]
+
+class Rate(models.Model):
+    user = models.ForeignKey(User, on_delete=models.PROTECT)
+    post = models.ForeignKey(Project, on_delete=models.PROTECT, related_name='likes', null=True)
+    design = models.IntegerField(validators=[MinValueValidator(1), MaxValueValidator(10)])
+    usability = models.IntegerField(validators=[MinValueValidator(1), MaxValueValidator(10)], null=True)
+    creativity = models.IntegerField(validators=[MinValueValidator(1), MaxValueValidator(10)])
+    content = models.IntegerField(validators=[MinValueValidator(1), MaxValueValidator(10)])
  
 
 
