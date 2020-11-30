@@ -43,3 +43,12 @@ class Project(models.Model):
     content = models.IntegerField(choices=list(zip(range(0, 11), range(0, 11))), default=0)
     vote_submissions = models.IntegerField(default=0)
 
+    def __str__(self):
+        return self.title
+    @classmethod
+    def fetch_all_images(cls):
+        all_images = Project.objects.all()
+        return all_images
+
+
+
