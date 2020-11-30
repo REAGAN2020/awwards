@@ -90,5 +90,11 @@ class Rate(models.Model):
     def save_rate(self):
         self.save()
 
+    def delete_rate(self):
+        self.delete()
+
+    class Meta:
+        db_table = 'ratings'
+
 
 
