@@ -23,6 +23,12 @@ class Profile(models.Model):
     def update_bio(self, bio):
         self.bio = bio
         self.save()
+    @classmethod
+    def get_profile_data(cls):
+        return Profile.objects.all()
+
+    class Meta:
+        db_table = 'profiles'
 
 
 
