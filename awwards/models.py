@@ -50,5 +50,10 @@ class Project(models.Model):
         all_images = Project.objects.all()
         return all_images
 
+    @classmethod
+    def get_single_project(cls, project):
+        project = cls.objects.get(id=project)
+        return project
+
 
 
