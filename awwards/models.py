@@ -64,7 +64,14 @@ class Project(models.Model):
     
 class Comment(models.Model):
     comment = models.CharField(max_length=80, null=True)
-    user = models.ForeignKey(User, null=True, on_delete=models.PROTECT)   
+    user = models.ForeignKey(User, null=True, on_delete=models.PROTECT)
+
+    def __str__(self):
+        return self.comment
+
+    def save_comment(self):
+        self.save()
+ 
 
 
 
