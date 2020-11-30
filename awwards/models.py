@@ -87,7 +87,8 @@ class Rate(models.Model):
     creativity = models.IntegerField(validators=[MinValueValidator(1), MaxValueValidator(10)])
     content = models.IntegerField(validators=[MinValueValidator(1), MaxValueValidator(10)])
  
-
+    def save_rate(self):
+        self.save()
 
 
 
