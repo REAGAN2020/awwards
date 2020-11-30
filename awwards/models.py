@@ -58,6 +58,13 @@ class Project(models.Model):
     def search_project_by_title(cls, search_term):
         project = cls.objects.filter(title__icontains=search_term)
         return project
+    class Meta:
+        db_table = 'projects'
+        ordering = ['-id']
+    
+class Comment(models.Model):
+    comment = models.CharField(max_length=80, null=True)
+    user = models.ForeignKey(User, null=True, on_delete=models.PROTECT)   
 
 
 
