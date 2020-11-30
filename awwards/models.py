@@ -75,7 +75,7 @@ class Comment(models.Model):
     def delete_comment(self):
         self.delete()
     
-     class Meta:
+    class Meta:
         db_table = 'comments'
         ordering = ["-id"]
 
