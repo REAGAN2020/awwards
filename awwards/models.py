@@ -30,5 +30,12 @@ class Profile(models.Model):
     class Meta:
         db_table = 'profiles'
 
+class Project(models.Model):
+    title = models.CharField(max_length=100)
+    details = models.TextField()
+    link = models.CharField(max_length=100)
+    user = models.ForeignKey(User, on_delete=models.PROTECT, null=True)
+    image = models.ImageField(upload_to='project_images', blank=True)
+    user_project_id = models.IntegerField(default=0)
 
 
