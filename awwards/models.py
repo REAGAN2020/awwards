@@ -9,3 +9,4 @@ class Profile(models.Model):
     bio = models.TextField(default="")
     contact_info = models.CharField(max_length=200, blank=True)
     profile_Id = models.IntegerField(default=0)
+    all_projects = models.ForeignKey('Project', on_delete=models.PROTECT, null=True)
