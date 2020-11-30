@@ -10,3 +10,10 @@ class Profile(models.Model):
     contact_info = models.CharField(max_length=200, blank=True)
     profile_Id = models.IntegerField(default=0)
     all_projects = models.ForeignKey('Project', on_delete=models.PROTECT, null=True)
+
+    def __str__(self):
+        return self.bio
+
+    def save_profile(self):
+        self.save()
+
