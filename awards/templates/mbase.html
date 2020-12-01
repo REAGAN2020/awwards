@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-    <title>Reagan</title>
+    <title>Awwards</title>
 
     {% block styles %}
     {% bootstrap_css %}
@@ -23,9 +23,9 @@
 <body>
 
 
-    <nav class="navbar bg-secondary">
+    <nav class="navbar bg-dark">
         <a href="{% url 'feed' %}">
-            <img src='/static/images/reagan logo.png' class="teflon " height="100px" width="130px" alt="picture">
+            <img src='/static/images/reagan logo.png' class="pongezzi" alt="picture">
         </a>
         </section>
 
@@ -35,8 +35,8 @@
             </div>
         </form>
 
-        <section class="icons-section text-dark"><a href="{% url 'profile' user.id %}">Profile</a></section>
-        <section class="icons-section text-dark"><a href="{% url 'login' %}">Logout</a></section>
+        <section class="icons-section"><a href="{% url 'profile' user.id %}">Profile</a></section>
+        <section class="icons-section"><a href="{% url 'login' %}">Logout</a></section>
     </nav>
 
     {% block content %}
