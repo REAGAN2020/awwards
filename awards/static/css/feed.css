@@ -14,8 +14,8 @@
   }
 .test-image {
     width: 100%;
-    height: 35vh;
-    background-image: url("/static/images/den.jpg");
+    height: 50vh;
+    background-image: url("/static/images/pexels.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
