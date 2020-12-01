@@ -1,22 +1,22 @@
 
-  nav{
-    background-color: #d29434 !important;;
+  .navbar{
+    background-color: #fcf5f5 !important;
   }
   
-  .navbar .logoname {
+  /* .navbar .logoname {
     width: 130px;
     margin-bottom: -1px;
     font-family: 'Grand Hotel', cursive;
     font-size: 20px;
   }
- 
+  */
  .search-section{
      margin-bottom: 70px;
  }
 
- .pongezzi{
-   width:130px;
-   height:100px;
+ .teflon{
+   /* width:130px;
+   height:100px; */
    margin-top: -60px;
  }
  .icons-section{
@@ -24,5 +24,5 @@
    margin-bottom: 50px;
  }
  .icons-section a:hover{
-  color: black;
+  color: rgb(233, 10, 10);
 }
