@@ -23,7 +23,7 @@
     </div>
 </div>
 
-<a href="{{projo.website_link}}" target="_blank"><button class="button button1">View Site</button></a>
+
 <p class="prt"><span class="rate">Rate</span> and <span class="rate">Review </span><b>the sites so they can win </p>
 
 <div class="container">
@@ -33,7 +33,7 @@
                 {% csrf_token %}
                 <fieldset class="form-group form">
                     <legend class="border-bottom mb-4">
-                        <p class="name"><b>{{auser.username}}, RATE THIS SITE </b></p>
+                        <p class="name"><b>{{auser.username}}, RATE THE SITE </b></p>
                     </legend>
 
                 </fieldset>
@@ -58,7 +58,6 @@
         </div>
 
         <hr>
-
-    </div>
+<a href="{{projo.website_link}}" target="_blank"><button class="button button1">View Site</button></a>
 </div>
 {% endblock %}
